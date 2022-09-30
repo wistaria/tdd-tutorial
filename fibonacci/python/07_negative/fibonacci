@@ -1,0 +1,9 @@
+#!@Python_EXECUTABLE@
+
+import sys
+sys.path.append('@CMAKE_SOURCE_DIR@')
+from fibonacci import fibonacci
+
+assert len(sys.argv) == 2, sys.argv[0] + " N"
+
+print(fibonacci(int(sys.argv[1])))

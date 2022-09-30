@@ -1,0 +1,9 @@
+#!@Python_EXECUTABLE@
+
+import sys
+sys.path.append('@CMAKE_SOURCE_DIR@')
+from lucas import lucas
+
+assert len(sys.argv) == 2, sys.argv[0] + " N"
+
+print(lucas(int(sys.argv[1])))
