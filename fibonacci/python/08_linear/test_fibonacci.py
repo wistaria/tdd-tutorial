@@ -1,6 +1,19 @@
+import pytest
 from fibonacci import fibonacci
 
-def test_fibonacci():
-    cases = [[-2, -1], [-1, 1], [0, 0], [1, 1], [2, 1], [3, 2], [10, 55], [40, 102334155]]
-    for n, v in cases:
-        assert fibonacci(n) == v
+
+@pytest.mark.parametrize(
+    "n, v",
+    [
+        [-2, -1],
+        [-1, 1],
+        [0, 0],
+        [1, 1],
+        [2, 1],
+        [3, 2],
+        [10, 55],
+        [40, 102334155],
+    ],
+)
+def test_fibonacci(n, v):
+    assert fibonacci(n) == v
