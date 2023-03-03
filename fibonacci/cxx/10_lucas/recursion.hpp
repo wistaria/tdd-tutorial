@@ -5,7 +5,7 @@
 
 namespace mp = boost::multiprecision;
 
-mp::cpp_int recursion(mp::cpp_int v0, mp::cpp_int v1, int n) {
+inline mp::cpp_int recursion(mp::cpp_int v0, mp::cpp_int v1, int n) {
   if (n < 0) {
     for (int i = -1; i >= n; --i)
       std::tie(v0, v1) = std::make_tuple(v1 - v0, v0);

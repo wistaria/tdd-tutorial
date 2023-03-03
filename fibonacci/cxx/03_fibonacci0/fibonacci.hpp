@@ -1,5 +1,5 @@
 #pragma once
 
-int fibonacci(int) {
+inline int fibonacci(int) {
   return 0;
 }
