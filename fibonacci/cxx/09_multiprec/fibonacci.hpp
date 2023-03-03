@@ -5,7 +5,7 @@
 
 namespace mp = boost::multiprecision;
 
-mp::cpp_int fibonacci(int n) {
+inline mp::cpp_int fibonacci(int n) {
   mp::cpp_int v0 = 0;
   mp::cpp_int v1 = 1;
   if (n < 0) {

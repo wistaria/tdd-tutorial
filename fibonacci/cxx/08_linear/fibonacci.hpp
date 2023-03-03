@@ -2,7 +2,7 @@
 
 #include <tuple>
 
-int fibonacci(int n) {
+inline int fibonacci(int n) {
   int v0 = 0;
   int v1 = 1;
   if (n < 0) {
