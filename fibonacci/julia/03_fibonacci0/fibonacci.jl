@@ -1,3 +1,5 @@
+# No need for "return"
+# Last line is implicitly returned
 function fibonacci(n)
-    return 0
+    0
 end

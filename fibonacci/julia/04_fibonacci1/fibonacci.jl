@@ -1,7 +1,8 @@
+# "if" can also return value
 function fibonacci(n)
     if n == 0
-        return 0
+        0
     else
-        return 1
+        1
     end
 end
