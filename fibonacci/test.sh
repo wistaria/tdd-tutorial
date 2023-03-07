@@ -3,7 +3,7 @@
 SCRIPT_DIR=$(cd "$(dirname $0)"; pwd)
 TEST_DIR=/tmp/fibonacci.$$
 
-for p in cxx python; do
+for p in cxx python julia; do
   DIRS=$(cd ${SCRIPT_DIR}/${p}; ls)
   for d in ${DIRS}; do
     if [ -f ${SCRIPT_DIR}/${p}/${d}/CMakeLists.txt ]; then
