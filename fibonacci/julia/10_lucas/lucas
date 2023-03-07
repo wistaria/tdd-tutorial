@@ -1,0 +1,7 @@
+#!@Julia_EXECUTABLE@
+
+include("@CMAKE_SOURCE_DIR@/lucas.jl")
+
+@assert size(ARGS, 1) == 1
+
+println(lucas(parse(Int, ARGS[1])))
