@@ -11,7 +11,14 @@ const TESTCASES = (
     (10, 55),
     (40, 102334155),
     (100, 354224848179261915075),
+    (250, 7896325826131730509282738943634332893686268675876375)
 )
+
+# NOTE: Julia has Int128
+@testset "intliteral" begin
+    @test 354224848179261915075 isa Int128
+    @test 7896325826131730509282738943634332893686268675876375 isa BigInt
+end
 
 @testset "fibonacci" begin
     for (n, v) ∈ TESTCASES
