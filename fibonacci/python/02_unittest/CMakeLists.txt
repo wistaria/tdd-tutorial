@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.14)
 project(fibonacci NONE)
-find_package (Python)
+find_package(Python)
 
 execute_process(COMMAND ${Python_EXECUTABLE} -m venv ${CMAKE_BINARY_DIR}/venv)
 set(ENV{VIRTUAL_ENV} ${CMAKE_BINARY_DIR}/venv)
