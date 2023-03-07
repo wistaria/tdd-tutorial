@@ -1,7 +1,6 @@
 using Test
 include("fibonacci.jl")
 
-
 @testset "fibonacci" begin
     let testcases = (
             (-2, -1),
@@ -13,7 +12,7 @@ include("fibonacci.jl")
             (10, 55),
             (40, 102334155),
             (100, 354224848179261915075),
-            (250, 7896325826131730509282738943634332893686268675876375)
+            (250, 7896325826131730509282738943634332893686268675876375),
         )
         for (n, v) ∈ testcases
             @test fibonacci(n) == v
