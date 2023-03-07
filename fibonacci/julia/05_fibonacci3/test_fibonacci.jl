@@ -1,6 +1,15 @@
 using Test
 include("fibonacci.jl")
 
-for t in [(0,0), (1,1), (2,1), (3,2)]
-  @test fibonacci(t[1]) == t[2]
+const TESTCASES = (
+    (0, 0),
+    (1, 1),
+    (2, 1),
+    (3, 2),
+)
+
+@testset "fibonacci" begin
+    for (n, v) ∈ TESTCASES
+        @test fibonacci(n) == v
+    end
 end
