@@ -1,5 +1,3 @@
-# You can use LaTeX symbols
-# ≤ is equivalent to <=
 function fibonacci(n)
     if n == 0
         0

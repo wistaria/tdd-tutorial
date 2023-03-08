@@ -1,4 +1,3 @@
-# "if" can also return value
 function fibonacci(n)
     if n == 0
         0
