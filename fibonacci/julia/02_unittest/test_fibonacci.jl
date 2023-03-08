@@ -1,3 +1,5 @@
 using Test
 
-@test 2 * 2 == 4
+@testset "fibonacci" begin
+    @test 2 * 2 == 4
+end

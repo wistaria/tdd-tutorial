@@ -2,19 +2,18 @@ function fibonacci(n)
     v0 = 0
     v1 = 1
     if n < 0
-        for i = -1:-1:n
-            v0, v1 = (v1 - v0, v0)
+        for _ ∈ -1:-1:n
+            (v0, v1) = (v1 - v0, v0)
         end
-        return v0
+        v0
+    elseif n == 0
+        v0
+    elseif n == 1
+        v1
+    else
+        for _ ∈ 2:n
+            (v1, v0) = (v0 + v1, v1)
+        end
+        v1
     end
-    if n == 0
-        return v0
-    end
-    if n == 1
-        return v1
-    end
-    for i = 2:n
-        v1, v0 = (v0 + v1, v1)
-    end
-    return v1
 end
