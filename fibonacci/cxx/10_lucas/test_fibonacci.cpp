@@ -4,10 +4,23 @@
 #include "fibonacci.hpp"
 
 TEST_CASE("fibonacci", "test") {
-  std::vector<std::tuple<int, mp::cpp_int>> cases {{-2, -1}, {-1, 1}, {0, 0}, {1, 1}, {2, 1}, {3, 2}, {10, 55}, {40, 102334155}, {100, mp::cpp_int("354224848179261915075")}};
-  for (auto c : cases) {
-    REQUIRE(fibonacci(std::get<0>(c)) == std::get<1>(c));
-    if (std::get<0>(c) > 0)
-      REQUIRE(fibonacci(std::get<0>(c)) > 0);
+  const std::vector<std::tuple<int, mp::cpp_int>> cases{
+      {-2, -1},
+      {-1, 1},
+      {0, 0},
+      {1, 1},
+      {2, 1},
+      {3, 2},
+      {10, 55},
+      {40, 102334155},
+      {100, mp::cpp_int("354224848179261915075")},
+      {250,
+       mp::cpp_int("7896325826131730509282738943634332893686268675876375")}};
+  for (auto &&nv : cases) {
+    const auto n = std::get<0>(nv);
+    const auto v = std::get<1>(nv);
+    REQUIRE(fibonacci(n) == v);
+    if (n > 0)
+      REQUIRE(fibonacci(n) > 0);
   }
 }

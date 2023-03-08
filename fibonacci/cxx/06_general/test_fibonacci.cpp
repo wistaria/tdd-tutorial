@@ -4,8 +4,11 @@
 #include "fibonacci.hpp"
 
 TEST_CASE("fibonacci", "test") {
-  std::vector<std::tuple<int, int>> cases {{0, 0}, {1, 1}, {2, 1}, {3, 2}, {10, 55}};
-  for (auto c : cases) {
-    REQUIRE(fibonacci(std::get<0>(c)) == std::get<1>(c));
+  const std::vector<std::tuple<int, int>> cases{
+      {0, 0}, {1, 1}, {2, 1}, {3, 2}, {10, 55}};
+  for (auto&& nv : cases) {
+    const auto n = std::get<0>(nv);
+    const auto v = std::get<1>(nv);
+    REQUIRE(fibonacci(n) == v);
   }
 }

@@ -1,4 +1,5 @@
 import pytest
+
 from lucas import lucas
 
 
@@ -14,6 +15,7 @@ from lucas import lucas
         [10, 123],
         [40, 228826127],
         [100, 792070839848372253127],
+        [250, 17656721319717734662791328845675730903632844218828123],
     ],
 )
 def test_lucas(n, v):
