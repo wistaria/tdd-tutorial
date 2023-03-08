@@ -16,7 +16,9 @@ TEST_CASE("fibonacci", "test") {
       {100, mp::cpp_int("354224848179261915075")},
       {250,
        mp::cpp_int("7896325826131730509282738943634332893686268675876375")}};
-  for (auto &&[n, v] : cases) {
+  for (auto &&nv : cases) {
+    const auto n = std::get<0>(nv);
+    const auto v = std::get<1>(nv);
     REQUIRE(fibonacci(n) == v);
     if (n > 0)
       REQUIRE(fibonacci(n) > 0);
