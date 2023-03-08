@@ -1,12 +1,6 @@
 using Test
 include("fibonacci.jl")
 
-# NOTE: Julia has Int128
-@testset "intliteral" begin
-    @test 354224848179261915075 isa Int128
-    @test 7896325826131730509282738943634332893686268675876375 isa BigInt
-end
-
 @testset "fibonacci" begin
     let testcases = (
             (-2, -1),
