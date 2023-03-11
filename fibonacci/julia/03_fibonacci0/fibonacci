@@ -1,0 +1,3 @@
+#!@Julia_EXECUTABLE@
+
+println("hello, world")
