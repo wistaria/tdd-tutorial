@@ -7,6 +7,7 @@ set(ENV{VIRTUAL_ENV} ${CMAKE_BINARY_DIR}/venv)
 set(Python_FIND_VIRTUALENV FIRST)
 unset(Python_EXECUTABLE)
 find_package(Python)
+execute_process(COMMAND ${Python_EXECUTABLE} -m pip install --upgrade pip)
 execute_process(COMMAND ${Python_EXECUTABLE} -m pip install -r ${CMAKE_SOURCE_DIR}/requirements.txt)
 enable_testing()
 
