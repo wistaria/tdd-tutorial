@@ -1,6 +1,6 @@
 function recursion(v0, v1, n)
     if n < 0
-        for _ ∈ -1:-1:n
+        for _ in -1:-1:n
             (v0, v1) = (v1 - v0, v0)
         end
         v0
@@ -9,7 +9,7 @@ function recursion(v0, v1, n)
     elseif n == 1
         v1
     else
-        for _ ∈ 2:n
+        for _ in 2:n
             (v1, v0) = (v0 + v1, v1)
         end
         v1
