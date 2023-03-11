@@ -6,7 +6,7 @@ SCRIPT_DIR=$(
 )
 TEST_DIR=/tmp/fibonacci.$$
 
-for p in  python julia; do
+for p in cxx python julia; do
   DIRS=$(
     cd "${SCRIPT_DIR}/${p}" || exit
     ls
