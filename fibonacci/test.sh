@@ -16,10 +16,10 @@ for p in cxx python julia; do
       echo "test: ${p}/${d}"
       rm -rf ${TEST_DIR}
       mkdir -p ${TEST_DIR}
-      (cd ${TEST_DIR} && cmake "${SCRIPT_DIR}/${p}/${d}" >/dev/null)
-      (cd ${TEST_DIR} && make -j all >/dev/null)
+      (cd ${TEST_DIR} && cmake "${SCRIPT_DIR}/${p}/${d}" >/dev/null) || exit 127
+      (cd ${TEST_DIR} && make -j all >/dev/null) || exit 127
       if [ -f "${TEST_DIR}/CTestTestfile.cmake" ]; then
-        (cd ${TEST_DIR} && ctest >/dev/null)
+        (cd ${TEST_DIR} && ctest >/dev/null) || exit 127
       fi
       rm -rf ${SCRIPT_DIR}/${p}/${d}/__pycache__ ${SCRIPT_DIR}/${p}/${d}/.pytest_cache
     fi
