@@ -2,6 +2,6 @@
 
 include("@CMAKE_SOURCE_DIR@/lucas.jl")
 
-@assert size(ARGS, 1) == 1
+@assert size(ARGS, 1) == 1 PROGRAM_FILE * " N"
 
 println(lucas(parse(Int, ARGS[1])))

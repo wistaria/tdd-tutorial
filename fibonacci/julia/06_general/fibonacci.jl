@@ -4,6 +4,6 @@ function fibonacci(n)
     elseif n == 1
         1
     else
-        fibonacci(n - 1) + fibonacci(n - 2)
+        fibonacci(n-1) + fibonacci(n-2)
     end
 end

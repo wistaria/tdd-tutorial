@@ -1,7 +1,5 @@
 #pragma once
 
-#include <tuple>
-
 inline int fibonacci(int n) {
   int v0 = 0;
   int v1 = 1;

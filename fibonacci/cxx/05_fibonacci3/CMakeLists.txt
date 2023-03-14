@@ -15,5 +15,5 @@ target_compile_options(fibonacci PRIVATE -Wall -Wextra)
 
 add_executable(test_fibonacci test_fibonacci.cpp)
 target_compile_options(test_fibonacci PRIVATE -Wall -Wextra)
-target_link_libraries(test_fibonacci Catch2::Catch2WithMain)
+target_link_libraries(test_fibonacci PRIVATE Catch2::Catch2WithMain)
 add_test(test_fibonacci test_fibonacci)
